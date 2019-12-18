@@ -1,0 +1,93 @@
+string txtKonv = "";
+
+char[] cifKonv;
+
+Console.WriteLine("Unesite željeni ceo broj dana (od 0 - 9999): ");
+string strUnos = Console.ReadLine();
+
+if (strUnos == "")
+{
+	Console.WriteLine("Niste uneli ništa, pokušajte ponovo! ;)");
+	Console.ReadKey();
+}
+else if (strUnos.Length < 5)
+{
+	strUnos = strUnos.PadLeft(4, '0');
+	cifKonv = strUnos.ToCharArray();
+
+	if (cifKonv[0].ToString() == "1") txtKonv = txtKonv + "jedna" + " hiljada ";
+	if (cifKonv[0].ToString() == "2") txtKonv = txtKonv + "dve" + " hiljade ";
+	if (cifKonv[0].ToString() == "3") txtKonv = txtKonv + "tri" + " hiljade ";
+	if (cifKonv[0].ToString() == "4") txtKonv = txtKonv + "četiri" + " hiljade ";
+	if (cifKonv[0].ToString() == "5") txtKonv = txtKonv + "pet" + " hiljada ";
+	if (cifKonv[0].ToString() == "6") txtKonv = txtKonv + "šest" + " hiljada ";
+	if (cifKonv[0].ToString() == "7") txtKonv = txtKonv + "sedam" + " hiljada ";
+	if (cifKonv[0].ToString() == "8") txtKonv = txtKonv + "osam" + " hiljada ";
+	if (cifKonv[0].ToString() == "9") txtKonv = txtKonv + "devet" + " hiljada ";
+
+	//Jedinice
+
+	if (cifKonv[1].ToString() == "1") txtKonv = txtKonv + "sto ";
+	if (cifKonv[1].ToString() == "2") txtKonv = txtKonv + "dvesta ";
+	if (cifKonv[1].ToString() == "3") txtKonv = txtKonv + "trista ";
+	if (cifKonv[1].ToString() == "4") txtKonv = txtKonv + "četiristo ";
+	if (cifKonv[1].ToString() == "5") txtKonv = txtKonv + "petsto ";
+	if (cifKonv[1].ToString() == "6") txtKonv = txtKonv + "šeststo ";
+	if (cifKonv[1].ToString() == "7") txtKonv = txtKonv + "sedamsto ";
+	if (cifKonv[1].ToString() == "8") txtKonv = txtKonv + "osamsto ";
+	if (cifKonv[1].ToString() == "9") txtKonv = txtKonv + "devetsto ";
+
+	if (cifKonv[2].ToString() == "2") txtKonv = txtKonv + "dvadeset ";
+	if (cifKonv[2].ToString() == "3") txtKonv = txtKonv + "trideset ";
+	if (cifKonv[2].ToString() == "4") txtKonv = txtKonv + "četrdeset ";
+	if (cifKonv[2].ToString() == "5") txtKonv = txtKonv + "pedeset ";
+	if (cifKonv[2].ToString() == "6") txtKonv = txtKonv + "šezdeset ";
+	if (cifKonv[2].ToString() == "7") txtKonv = txtKonv + "sedamdeset ";
+	if (cifKonv[2].ToString() == "8") txtKonv = txtKonv + "osamdeset ";
+	if (cifKonv[2].ToString() == "9") txtKonv = txtKonv + "devedeset ";
+
+	if (cifKonv[2].ToString() == "1")
+	{
+		if (cifKonv[3].ToString() == "0") txtKonv = txtKonv + "deset ";
+		if (cifKonv[3].ToString() == "1") txtKonv = txtKonv + "jedanaest ";
+		if (cifKonv[3].ToString() == "2") txtKonv = txtKonv + "dvanaest ";
+		if (cifKonv[3].ToString() == "3") txtKonv = txtKonv + "trinaest ";
+		if (cifKonv[3].ToString() == "4") txtKonv = txtKonv + "četrnaest ";
+		if (cifKonv[3].ToString() == "5") txtKonv = txtKonv + "petnaest ";
+		if (cifKonv[3].ToString() == "6") txtKonv = txtKonv + "šesnaest ";
+		if (cifKonv[3].ToString() == "7") txtKonv = txtKonv + "sedamnaest ";
+		if (cifKonv[3].ToString() == "8") txtKonv = txtKonv + "osamnaest ";
+		if (cifKonv[3].ToString() == "9") txtKonv = txtKonv + "devetnaest ";
+
+		Console.WriteLine("Slovima: " + txtKonv + "dana");
+	}
+	else
+	{
+		if (cifKonv[3].ToString() == "1")
+		{
+			txtKonv = txtKonv + "jedan dan";
+			Console.WriteLine("Slovima: " + txtKonv);
+		}
+		else
+		{
+			if (cifKonv[3].ToString() == "2") txtKonv = txtKonv + "dva ";
+			if (cifKonv[3].ToString() == "3") txtKonv = txtKonv + "tri ";
+			if (cifKonv[3].ToString() == "4") txtKonv = txtKonv + "četiri ";
+			if (cifKonv[3].ToString() == "5") txtKonv = txtKonv + "pet ";
+			if (cifKonv[3].ToString() == "6") txtKonv = txtKonv + "šest ";
+			if (cifKonv[3].ToString() == "7") txtKonv = txtKonv + "sedam ";
+			if (cifKonv[3].ToString() == "8") txtKonv = txtKonv + "osam ";
+			if (cifKonv[3].ToString() == "9") txtKonv = txtKonv + "devet ";
+
+			txtKonv = txtKonv + "dana";
+			Console.WriteLine("Slovima: " + txtKonv);
+		}
+	}
+
+	Console.ReadKey();
+}
+else
+{
+	Console.WriteLine("Broj koji ste uneli je veći, pokušajte ponovo! :)");
+	Console.ReadKey();
+}
