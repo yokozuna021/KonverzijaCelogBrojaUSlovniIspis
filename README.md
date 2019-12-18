@@ -1,0 +1,3 @@
+# KonverzijaCelogBrojaUSlovniIspis
+KonverzijaCelogBrojaUSlovniIspis
+Imao sam potrebe da napravim ovakvu konverziju, pomislio sam da bi nekome možda mogla da zatreba...
